@@ -98,6 +98,33 @@ int	left_redir(char *path)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (fd < 0 || !(s))
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
+}
+
+int double_left_redi(char *path)
+{
+	int		fd;
+	int 	pip[2];
+	char	*line;
+	
+	fd = 0;
+	pipe(pip);
+	line = readline("> ");
+	while (ft_strncmp(line, path, 5))
+	{
+		ft_putendl_fd(line, pip[1]);
+	}
+	close(pip[1]);
+	dup2(pip[0], 0);
+	close(pip[0]);
+	pipe((*fds));
+	return (0);
+}
 
 void	redir_hub(t_tree *root)
 {
@@ -107,5 +134,7 @@ void	redir_hub(t_tree *root)
 		right_redir(root->left->right->data[0]);
 	else if (root->left->left->type == RIGHT_DOUBLE_REDI)
 		double_right_redir(root->left->right->data[0]);
+	else if (root->left->left->type == LEFT_DOUBLE_REDI)
+		double_left_redi(root->left->right->data[0]);
 	return ;
 }

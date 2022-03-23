@@ -6,7 +6,7 @@
 /*   By: kbaek <kbaek@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:46:33 by kbaek             #+#    #+#             */
-/*   Updated: 2022/03/23 16:39:04 by kbaek            ###   ########.fr       */
+/*   Updated: 2022/03/23 20:59:54 by kbaek            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int	main(int argc, char *argv[], char *env[])
 			if (syntax_hub(info->t_head, info->debug) == EXIT_FAILURE && info->t_head != NULL)
 				printf("syntax error\npoint : %s\ndata : %s\n", info->debug->syntax_error, (char *)info->debug->error_point_data);
 			parse_tree(info);
+			print_tree(info->root, 0);
 			action(info, 0, 0);
 			add_history(full_cmd);
 			postorder_del_tree(info->root);
