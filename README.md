@@ -27,7 +27,10 @@ minishell
 ```
 echo $USER
 ```
+### AST Tree
 
+bash$ echo happy > feeling | echo unhappy >> feeling | cat < feeling | grep un
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b7e683-6bc1-437f-9fed-bcb84bc98c64/Untitled.png)
 
 ## Authors
 
