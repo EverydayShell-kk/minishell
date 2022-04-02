@@ -31,7 +31,8 @@ echo $USER
 
 bash$ echo happy > feeling | echo unhappy >> feeling | cat < feeling | grep un
 
-https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b7e683-6bc1-437f-9fed-bcb84bc98c64/Untitled.png
+![image](https://user-images.githubusercontent.com/69143394/161373344-b5dafe66-8397-4de2-8bac-5719ffbd6aba.png)
+
 
 ## Authors
 
